@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="War_Card_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="DX8-MP-whD">
+                                <rect key="frame" x="0.0" y="-160" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="T8S-3H-DXd" userLabel="Cards and deal button stack view">
+                                <rect key="frame" x="77" y="224.66666666666666" width="260" height="286.66666666666674"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0dH-Sl-Stx" userLabel="Cards stack view">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="170"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card5" translatesAutoresizingMaskIntoConstraints="NO" id="fjB-MJ-Gvd" userLabel="Card 1">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card12" translatesAutoresizingMaskIntoConstraints="NO" id="OO3-tV-IbV" userLabel="Card 2">
+                                                <rect key="frame" x="140" y="0.0" width="120" height="170"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZqY-Fz-jPk" userLabel="Deal">
+                                        <rect key="frame" x="0.0" y="190.00000000000003" width="260" height="96.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" image="dealbutton">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dealTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X49-9a-ZLY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ZqY-Fz-jPk" firstAttribute="centerX" secondItem="T8S-3H-DXd" secondAttribute="centerX" id="gsN-Ec-nL4"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g3b-ny-axt" userLabel="Player stack view">
+                                <rect key="frame" x="40" y="647.66666666666663" width="47" height="68.333333333333371"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gX0-qu-zdj" userLabel="Player">
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxf-Ny-FzZ" userLabel="0">
+                                        <rect key="frame" x="0.0" y="20.333333333333371" width="47" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jyi-s8-cSB" userLabel="CPU stack view">
+                                <rect key="frame" x="339.66666666666669" y="647.66666666666663" width="34.333333333333314" height="68.333333333333371"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdE-Or-7ZL" userLabel="CPU">
+                                        <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaO-Wg-c4d" userLabel="0">
+                                        <rect key="frame" x="0.0" y="20.333333333333371" width="34.333333333333336" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="aBu-0x-9Ac">
+                                <rect key="frame" x="146" y="63" width="122" height="67"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="T8S-3H-DXd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1CA-L5-FZE"/>
+                            <constraint firstItem="T8S-3H-DXd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2KW-Rg-gcN"/>
+                            <constraint firstItem="aBu-0x-9Ac" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="63" id="5P2-iS-y8s"/>
+                            <constraint firstItem="aBu-0x-9Ac" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="65n-04-hEo"/>
+                            <constraint firstItem="T8S-3H-DXd" firstAttribute="top" secondItem="aBu-0x-9Ac" secondAttribute="bottom" constant="94.670000000000002" id="ON6-DR-r7r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jyi-s8-cSB" secondAttribute="trailing" constant="40" id="e3n-ji-oV1"/>
+                            <constraint firstItem="DX8-MP-whD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-160" id="f2j-lD-t41"/>
+                            <constraint firstItem="DX8-MP-whD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fcT-LH-Bvj"/>
+                            <constraint firstItem="DX8-MP-whD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gFY-7T-Dpt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jyi-s8-cSB" secondAttribute="bottom" constant="20" id="gvN-PH-sRX"/>
+                            <constraint firstItem="g3b-ny-axt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="m8J-wV-V6C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="g3b-ny-axt" secondAttribute="bottom" constant="20" id="qN1-Tt-fbC"/>
+                            <constraint firstItem="DX8-MP-whD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="r2M-C1-TNa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="leftImageView" destination="fjB-MJ-Gvd" id="Gri-xB-UQu"/>
+                        <outlet property="leftScoreLabel" destination="sxf-Ny-FzZ" id="D0J-gL-ZTV"/>
+                        <outlet property="rightImageView" destination="OO3-tV-IbV" id="Y34-pn-iJb"/>
+                        <outlet property="rightScoreLabel" destination="FaO-Wg-c4d" id="zf9-ea-NjE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.94565217391305"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="414" height="896"/>
+        <image name="card12" width="120" height="170"/>
+        <image name="card5" width="120" height="170"/>
+        <image name="dealbutton" width="81.666664123535156" height="31"/>
+        <image name="logo" width="122" height="67"/>
+    </resources>
+</document>
